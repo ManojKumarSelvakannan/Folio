@@ -400,14 +400,22 @@
         }
 
         .contact-item {
-            background-color: rgba(11, 15, 25, 0.8);
-            padding: 1.2rem;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
+    background-color: rgba(11, 15, 25, 0.8);
+    padding: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    min-width: 0; /* Prevents flex items from overflowing container */
+    }
+
+/* Add this rule to handle long text like email addresses */
+.contact-item a,
+.contact-item div {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    }
 
         .contact-item i {
             color: var(--accent-blue);
