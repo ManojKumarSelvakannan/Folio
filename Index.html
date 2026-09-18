@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj Kumar Selvakannan | Salesforce Admin & Developer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .role-title {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .company {
+            color: var(--accent-color);
+        }
+
+        .dates {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .badge {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-right: 0.5rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER / HERO -->
+        <header>
+            <h1>Manoj Kumar Selvakannan</h1>
+            <div class="subtitle">Salesforce Administrator & Developer</div>
+            <div class="contact-info">
+                <span>📍 Mississauga, ON (PR Status)</span>
+                <span>📧 <a href="mailto:manojkumarselvakannan@gmail.com">manojkumarselvakannan@gmail.com</a></span>
+                <span>📞 +1-(226)-975-4746</span>
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="Manoj_Kumar_Resume.pdf" download="Manoj_Kumar_Resume.pdf" class="btn">📄 Download Resume</a>
+                <a href="https://linkedin.com" target="_blank" class="btn">LinkedIn</a>
+                <a href="https://trailhead.salesforce.com" target="_blank" class="btn">Trailhead Profile</a>
+            </div>
+        </header>
+
+        <!-- ABOUT -->
+        <section>
+            <h2>About Me</h2>
+            <div class="card">
+                <p style="color: var(--text-muted);">
+                    Results-driven Salesforce Administrator & Developer with 4 years of experience delivering end-to-end CRM solutions across Sales, Service, and Experience Cloud. Hands-on expertise in Apex development, LWC, Flow automation, REST/SOAP API integrations, and data management with a proven ability to triage complex client issues and resolve them within SLA.
+                </p>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section>
+            <h2>Certifications</h2>
+            <div class="badges">
+                <span class="badge">Salesforce Certified Administrator (ADM 201)</span>
+                <span class="badge">Salesforce Certified AI Associate</span>
+                <span class="badge">Salesforce Certified Platform Developer - I (In-Progress)</span>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section>
+            <h2>Work Experience</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="role-title"><span class="company">Maxval Group</span> — Salesforce Administrator & Developer</div>
+                    <div class="dates">Apr 2026 – Present</div>
+                </div>
+                <ul>
+                    <li>Own end-to-end ticket lifecycle in an IP domain environment, diagnosing root causes and communicating fix timelines directly to clients within SLA.</li>
+                    <li>Resolve complex Apex and LWC defects, debug Flows and automation failures, and fix API integrations across client orgs.</li>
+                    <li>Develop, test, and validate Apex and LWC code in Partial Sandbox environments, ensuring thorough QA before deployment.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="role-title"><span class="company">OTS Astracon</span> — Salesforce Administrator & Developer (Freelance)</div>
+                    <div class="dates">Apr 2025 – Jan 2026</div>
+                </div>
+                <ul>
+                    <li>Overhauled Role Hierarchy and Permission Sets to restrict sensitive financial data access to HR and Accounting teams.</li>
+                    <li>Cleansed and deduplicated thousands of records using Data Loader, boosting outreach accuracy and system performance.</li>
+                    <li>Configured Scheduled Flows to monitor stagnant cargo updates, triggering automated alerts to dispatchers.</li>
+                    <li>Integrated Salesforce with external systems via REST API for streamlined quote processing and real-time data sync.</li>
+                    <li>Built and maintained Experience Cloud sites with branded layouts, security configurations, and content controls.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="role-title"><span class="company">Seven Hills Technologies</span> — Salesforce Administrator & Consultant</div>
+                    <div class="dates">Feb 2022 – Jan 2023</div>
+                </div>
+                <ul>
+                    <li>Implemented 30+ automation rules using Flows and Process Builder, reducing manual admin effort by 50%.</li>
+                    <li>Configured multi-level approval workflows for deal desk and sales leadership, expediting decision-making by 40%.</li>
+                    <li>Supported Batch Apex development for bulk record updates and executed seamless data migrations.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+            <h2>Education</h2>
+            <div class="card">
+                <p><strong>M.Eng. Mechanical Engineering</strong> — University of Windsor, ON (2021 – 2023)</p>
+                <p style="margin-top: 0.5rem;"><strong>B.Eng. Automobile Engineering</strong> — Anna University, India (2016 – 2020)</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Manoj Kumar Selvakannan • Built with GitHub Pages</p>
+        </footer>
+    </div>
+
+</body>
+</html>
