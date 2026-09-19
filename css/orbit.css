@@ -1,0 +1,91 @@
+/* ORBITAL ANIMATION FEATURE */
+.orbit-card {
+    width: 380px;
+    height: 380px;
+    background: rgba(21, 28, 44, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    margin: 0 auto;
+}
+
+.central-core {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #00a1e0, #0070d2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2.2rem;
+    box-shadow: 0 0 35px rgba(0, 161, 224, 0.6);
+    z-index: 5;
+    position: absolute;
+}
+
+.ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ring-1 { width: 160px; height: 160px; animation: spin 16s linear infinite; }
+.ring-2 { width: 240px; height: 240px; animation: spin 26s linear infinite reverse; }
+.ring-3 { width: 320px; height: 320px; animation: spin 36s linear infinite; }
+
+.orbit-badge {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    animation: counter-spin linear infinite;
+}
+
+.ring-1 .orbit-badge { animation-duration: 16s; animation-direction: reverse; }
+.ring-2 .orbit-badge { animation-duration: 26s; }
+.ring-3 .orbit-badge { animation-duration: 36s; animation-direction: reverse; }
+
+.orbit-badge i {
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.badge-apex { background: #e04e39; top: -22px; }
+.badge-lwc  { background: #1589ee; bottom: -22px; }
+.badge-flow { background: #f26623; left: -22px; }
+.badge-api  { background: #9053c7; right: -22px; }
+.badge-sec  { background: #4b6584; top: 25px; left: -10px; }
+.badge-data { background: #20bf6b; bottom: 25px; right: -10px; }
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes counter-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); }
+}
+
+.orbit-card:hover .ring,
+.orbit-card:hover .orbit-badge {
+    animation-play-state: paused;
+}
