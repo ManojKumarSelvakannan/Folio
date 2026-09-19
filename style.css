@@ -1,0 +1,145 @@
+/* ==========================================================================
+   SLDS / Salesforce Design Tokens
+   ========================================================================== */
+:root {
+    /* Brand & Accent Palette */
+    --slds-brand-blue: #0176d3;          /* Salesforce Brand Blue */
+    --slds-brand-blue-hover: #014486;    /* Darker Blue for hover states */
+    --slds-brand-blue-active: #012b54;   /* Active / Pressed state */
+    
+    /* Neutral / Canvas Colors */
+    --slds-bg-body: #f3f3f3;             /* SLDS App Background */
+    --slds-bg-surface: #ffffff;          /* Card & Surface Container */
+    --slds-border-color: #dddbda;        /* Standard UI Border */
+    --slds-border-radius: 0.25rem;       /* Standard SLDS 4px Radius */
+    
+    /* Typography Colors */
+    --slds-text-default: #181818;        /* High Contrast Text (WCAG 2.1 AA compliant) */
+    --slds-text-weak: #444444;           /* Secondary / Subtitle text */
+    --slds-text-inverse: #ffffff;        /* Light text on dark backgrounds */
+    
+    /* Semantic Feedback Colors */
+    --slds-color-success: #2e844a;       /* Success State */
+    --slds-color-destructive: #ba0517;   /* Destructive / Alert Red */
+    --slds-color-destructive-hover: #8e0312;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--slds-bg-body);
+    color: var(--slds-text-default);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   SLDS Card Components
+   ========================================================================== */
+.grid-card, .hero-banner {
+    background-color: var(--slds-bg-surface);
+    border: 1px solid var(--slds-border-color);
+    border-radius: var(--slds-border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.company-name, .section-title {
+    color: var(--slds-brand-blue);
+}
+
+/* ==========================================================================
+   SLDS Button Styles
+   ========================================================================== */
+.slds-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    min-height: 2rem;
+    background-clip: border-box;
+    border: 1px solid transparent;
+    border-radius: var(--slds-border-radius);
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+/* 1. Neutral Button (Default Light Action) */
+.slds-button_neutral {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid var(--slds-border-color);
+    background-color: var(--slds-bg-surface);
+    color: var(--slds-brand-blue);
+}
+
+.slds-button_neutral:hover {
+    background-color: #f3f3f3;
+    color: var(--slds-brand-blue-hover);
+}
+
+/* 2. Brand Button (Primary Action) */
+.slds-button_brand {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    background-color: var(--slds-brand-blue);
+    border-color: var(--slds-brand-blue);
+    color: var(--slds-text-inverse);
+}
+
+.slds-button_brand:hover {
+    background-color: var(--slds-brand-blue-hover);
+    border-color: var(--slds-brand-blue-hover);
+}
+
+/* 3. Destructive Button (Critical Action) */
+.slds-button_destructive {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    background-color: var(--slds-color-destructive);
+    border-color: var(--slds-color-destructive);
+    color: var(--slds-text-inverse);
+}
+
+.slds-button_destructive:hover {
+    background-color: var(--slds-color-destructive-hover);
+    border-color: var(--slds-color-destructive-hover);
+}
+
+/* ==========================================================================
+   SLDS Contact Item & Layout Helpers
+   ========================================================================== */
+.contact-item {
+    background-color: var(--slds-bg-surface);
+    padding: 1rem;
+    border-radius: var(--slds-border-radius);
+    border: 1px solid var(--slds-border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.contact-item a,
+.contact-item div {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
