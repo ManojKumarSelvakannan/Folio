@@ -52,15 +52,26 @@
     transition: all 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--text-main);
     background-color: var(--bg-card-hover);
+}
+
+.nav-links a.active {
+    box-shadow: inset 3px 0 0 var(--accent-blue);
 }
 
 .sidebar-buttons {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+}
+
+/* Keyboard focus */
+a:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
 }
 
 /* Button Variants */
@@ -110,8 +121,13 @@
     color: var(--accent-blue);
 }
 
+section {
+    margin-bottom: 3rem;
+}
+
 .grid-card {
     background-color: var(--bg-card);
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -136,10 +152,21 @@
 
 .hero-banner {
     background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(129, 140, 248, 0.1));
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(56, 189, 248, 0.3);
     border-radius: 12px;
     padding: 2.5rem;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text {
+    color: var(--text-muted);
+    font-size: 1.05rem;
 }
 
 .stats-grid {
@@ -174,6 +201,7 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -216,6 +244,11 @@ ul.bullets li {
     margin-top: 1rem;
 }
 
+.tag-group.spaced {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
 .tag {
     background-color: rgba(56, 189, 248, 0.1);
     color: var(--accent-blue);
@@ -224,6 +257,26 @@ ul.bullets li {
     border-radius: 6px;
     font-size: 0.8rem;
     font-weight: 600;
+}
+
+.tag.pending {
+    opacity: 0.75;
+}
+
+/* Project / skills / education text */
+.card-heading {
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.edu-line + .edu-line {
+    margin-top: 0.5rem;
 }
 
 /* Grid Layouts */
@@ -260,4 +313,72 @@ ul.bullets li {
     color: var(--accent-blue);
     font-size: 1.2rem;
     flex-shrink: 0;
+}
+
+.contact-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.contact-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.contact-link {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ---------- Responsive overrides (keep at the END of this file) ---------- */
+@media (max-width: 1100px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .profile-section {
+        text-align: left;
+    }
+    .avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8rem;
+        margin: 0 0 1rem 0;
+    }
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+    .nav-links li {
+        margin-bottom: 0;
+    }
+    .nav-links a {
+        padding: 0.45rem 0.7rem;
+        font-size: 0.85rem;
+    }
+    .nav-links a.active {
+        box-shadow: none;
+        outline: 1px solid var(--accent-blue);
+    }
+    .sidebar-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .sidebar-buttons .btn {
+        flex: 1 1 140px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-banner {
+        padding: 1.5rem;
+    }
+    .hero-title {
+        font-size: 1.7rem;
+    }
 }

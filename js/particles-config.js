@@ -30,7 +30,8 @@ particlesJS("particles-js", {
             "resize": true
         },
         "modes": {
-            "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }
+            "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } },
+            "push": { "particles_nb": 2 }
         }
     },
     "retina_detect": true
