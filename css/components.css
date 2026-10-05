@@ -305,7 +305,6 @@ ul.bullets li {
 
 .contact-item a,
 .contact-item div {
-    word-break: break-all;
     overflow-wrap: anywhere;
 }
 
