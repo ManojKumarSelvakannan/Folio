@@ -329,6 +329,13 @@ ul.bullets li {
     font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
+    border-bottom: 1px dashed rgba(56, 189, 248, 0.5);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}   
+
+.contact-link:hover {
+    color: var(--accent-blue);
+    border-bottom-color: var(--accent-blue);
 }
 
 /* ---------- Responsive overrides (keep at the END of this file) ---------- */
